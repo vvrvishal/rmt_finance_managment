@@ -1,0 +1,1724 @@
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Financial Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="ArchitectUI HTML Bootstrap 4 Dashboard Template">
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://rmt.ecovisrkca.com/main.87c0748b313a1dda75f5.css" rel="stylesheet">
+    <script src="https://rmt.ecovisrkca.com/assets/scripts/jquery-2.1.3.js" type="text/javascript"></script>
+    <script src="https://rmt.ecovisrkca.com/assets/scripts/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+    <link href="https://rmt.ecovisrkca.com/assets/scripts/toastr/toastr.css" rel="stylesheet" type="text/css" />
+    <script src="https://rmt.ecovisrkca.com/assets/scripts/toastr/toastr.min.js" type="text/javascript"></script>
+    <link href="https://rmt.ecovisrkca.com/assets/scripts/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://rmt.ecovisrkca.com/assets/scripts/datatables/datatables.min.js" type="text/javascript"></script>
+    <script src="//cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.6.0/src/loadingoverlay.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+    <style>
+        .modal-backdrop,
+        .blockOverlay {
+            display: none;
+            z-index: -99!important;
+        }
+        
+        .modal {
+            padding-top: 35px;
+            z-index: 2040!important;
+        }
+        
+        .PS {
+            background: none !important;
+        }
+        
+        .loader12 {
+            position: fixed;
+            display: none;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('https://rmt.ecovisrkca.com/assets/images/loading1.gif') 50% 50% no-repeat rgb(249, 249, 249);
+        }
+        
+        .vertical-nav-menu i.metismenu-state-icon,
+        .vertical-nav-menu i.metismenu-icon {
+            opacity: 1;
+        }
+        
+        vertical-nav-menu li a {
+            color: #4167ca !important;
+        }
+        
+        .app-sidebar__heading {
+            margin-left: 8px;
+        }
+        
+        .list_lis {
+            padding: 8px;
+            color: red important;
+            font-size: 14px;
+            margin-left: -30px;
+        }
+        
+        .app-sidebar {
+            min-width: 9%;
+        }
+        
+        .fixed-sidebar .app-main .app-main__outer {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .app-theme-white .app-header {
+            background: #891635;
+        }
+        
+        .app-theme-white.fixed-header .app-header__logo {
+            background: #891635;
+        }
+        
+        .fixed-header .app-header {
+            width: 108%;
+        }
+        
+        .card-header {
+            font-size: 16px;
+        }
+        
+        .dphdr {
+            padding: 17px !important;
+            margin: 1%;
+            font-size: 14px !important;
+            border-bottom: 2px solid #d3d3d3 !important;
+            width: 250px !important;
+            padding-left: 15% !important;
+        }
+        
+        .dphdr:hover {
+            background-color: #891635 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body style="font-size:12px !important;">
+
+    <style>
+        .firstsection {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            box-shadow: 1px 2px 6px 2px rgb(32 33 36 / 41%);
+            border-radius: 20px 20px 0px 0px;
+        }
+        
+        .tpdiv {
+            background-color: #68349a;
+            background-color: #891635;
+            color: white;
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px 20px 0px 0px;
+        }
+        
+        .right_icon {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 7%;
+        }
+        
+        .image_div1 {
+            height: 100%;
+            /* height: 25px;
+            width: 25%;
+            margin-left: 280%;
+            //margin-left:92%;
+            //margin-right: 50%; */
+        }
+        
+        .left_icon {
+            margin-right: 8px;
+        }
+        
+        .hamburger {
+            padding: 0px 0px;
+            display: inline-block;
+            cursor: pointer;
+            transition-property: opacity, filter;
+            transition-duration: 0.15s;
+            transition-timing-function: linear;
+            font: inherit;
+            color: inherit;
+            text-transform: none;
+            background-color: transparent;
+            border: 0;
+            margin: 0;
+            overflow: visible;
+        }
+        
+        #overlay_div {
+            position: fixed;
+            width: 20%;
+            height: 91%;
+            right: 2%;
+            bottom: 0;
+            z-index: 99999;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+
+    <div class=" firstsection">
+
+        <div class="tpdiv">
+            <div class="col-md-10 right_icon">
+                <div class="col-md-6 dropdown" style="padding-left:7%">
+                    <button class="hamburger btn btn-link" type="button" id="menu1" onclick="drop_div()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-th text-white" style="color:white;font-size:20px;margin-right:5%"></i>
+					</button>
+
+                    <div class="dropdown-menu border-0 p-0" id="drop_div" role="menu" aria-labelledby="menu1" style="margin-top:-18px;">
+                        <!--<a class="dropdown-item" href="#" onclick="dashboard_dekstop()">DASHBOARD</a>-->
+                        <a class="dropdown-item dphdr" href="#" onclick="communication_dekstop()">COMMUNICATION</a>
+                        <a class="dropdown-item dphdr" href="#" onclick="task_dekstop()">PROJECTS MANAGEMENT</a>
+                        <a class="dropdown-item dphdr" href="#" onclick="others_dekstop()">MY COMPANY</a>
+                        <a class="dropdown-item dphdr" href="#" onclick="financial_management()">FINANCIAL MANAGEMENT</a>
+                        <a class="dropdown-item dphdr" href="#" onclick="go_payroll()">PAYROLL</a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 image_div1">
+                    <img id="logo_img" src="https://rmt.ecovisrkca.com/Images/mentor-lab-200-px.png" width="150px" height="30px" alt="Gold Berries">
+                </div>
+
+
+            </div>
+
+            <div class="col-md-4 left_icon">
+                <div>
+
+                    <button class="btn btn-link" data-toggle="modal" data-target="#advertisementModal"><i
+								style="color:white;font-size:16px;" class="fa fa-bell"></i></button>
+
+
+                    <button class="btn btn-link" onclick="go_signout()">
+						<i class="fas fa-sign-out-alt text-white"
+						   style="color:white;font-size:16px;margin-right:5%"></i>
+					</button>
+                    <img src="https://rmt.ecovisrkca.com//assets/images/photo_image1.png" style="border-radius:50%;width:50px;padding: 2%;" data-toggle="modal" data-target="#exampleModal">
+                    <!--<div class="image_div" ></div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .leftside1 {
+            height: 100%;
+            width: 3%;
+            /* //padding: 1%;
+            / / background-color: #44494e; */
+            box-shadow: 1px 2px 6px 2px rgb(32 33 36 / 41%);
+            margin-top: 13px;
+            background-color: #891635;
+        }
+        
+        .secondSection {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+            height: 94vh;
+            /*background-color:#d0bee1;*/
+            /*background-color:#ffffff;*/
+        }
+        
+        .nav>li>a {
+            position: relative;
+            display: block;
+            /* //padding: 5px 10px 20px 10px; */
+            padding: 0px 15px;
+            font-size: 20px;
+        }
+        
+        .nav-link:hover {
+            background: none;
+        }
+        
+        .nav>li>a:hover {
+            text-decoration: none;
+            background-color: #eee0;
+            color: white;
+        }
+        
+        .midddlediv {
+            height: calc(95vh - 0px);
+            width: 100%;
+            margin-top: 15px;
+            /* //margin-left: 1%;
+            //margin-right: 1%;
+            / / padding-top: 1 %;
+            // box-shadow: 1px 1px 4px 2px rgb(32 33 36 / 41%); */
+        }
+    </style>
+    <div class=" secondSection">
+        <!--second section open close in right section-->
+        <div class="leftside1">
+            <!--<div id="slidediv1" class="sidenav d-none">
+				<a href="https://rmt.ecovisrkca.com/view_contract" id="slide_a" target="_blank">
+					<div class="col-sm-12" style="width:100%">
+						<div class="col-sm-11" style="width:80%;height:300px;">1Hoverable Sidenav Buttons</div>
+						<div class="col-sm-1" style="width:20%;float:right;heigh:100px;padding-top: 18px;">
+						
+								<button style="transform: rotate(90deg);color:white;width: 160px;border:none;background-color:#595959;">
+								<i class="fa fa-tasks"></i> &nbsp;TASK - <span id="T_Task"></span></button>
+						</div>
+						<input type="hidden" name="p_count" id="p_count"/>
+						<input type="hidden" name="Btask" id="Btask"/>
+						<input type="hidden" name="Pro_task" id="Pro_task"/>
+					</div>
+				</a>
+			</div>-->
+            <div class="text-light" style="padding-top:100px;">
+
+                <nav id="sidebarLeftMenu" class="d-md-block collapse pt-1 " style="top:0px;bottom:0;left:0;padding-top: 45px;z-index: 9;">
+
+                    <div class="sidebar-sticky">
+
+                        <ul class="nav flex-column align-content-around" id="dashboard_dekstop" style="display:none">
+                            <li class="nav-item">
+                                <a class="nav-link active" onclick="email_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><i class="fa fa-envelope"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="chat_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><i class="fa fa-comments"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="folder_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><i class="fa fa-folder"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="task_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fa fa-list"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="board_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fa fa-address-card"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item" onclick="financial_management()">
+                                <a class="nav-link" href="https://amgt.docango.com/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fas fa-copy"></i></svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav flex-column align-content-around" id="communication_dekstop">
+                            <li class="nav-item">
+                                <a class="nav-link active" onclick="email_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><i class="fa fa-envelope"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="chat_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><i class="fa fa-comments"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="folder_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><i class="fa fa-folder"></i></svg>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <ul class="nav flex-column align-content-around" id="project_dekstop" style="display:none">
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="task_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fa fa-list"></i></svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="board_iframe()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fa fa-address-card"></i></svg>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                        <ul class="nav flex-column align-content-around" id="others_dekstop" style="display:none">
+                            <!--<li class="nav-item">
+                            <a class="nav-link" onclick="dashboard_iframe()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"> <i class="far fa-clipboard btn-icon-wrapper" style="color: white;"></i></svg>
+                            </a>
+                        </li>-->
+
+                            <!--<li class="nav-item">
+								<a class="nav-link" onclick="videoChat_iframe()">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fas fa-video"></i></svg>
+								</a>
+							</li>-->
+                            <!--<li class="nav-item">
+										<a class="nav-link" onclick="planAndSchedule_iframe()">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"> <i class="fas fa-project-diagram btn-icon-wrapper" style="color: white;"></i></svg>
+										</a>
+									</li>-->
+                            <!--<li class="nav-item">
+								<a class="nav-link" onclick="workStore_iframe()">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"> <i class="fas fa-briefcase btn-icon-wrapper" style="color: white"></i></svg>
+								</a>
+							</li>-->
+                            <!--<li class="nav-item">
+								<a class="nav-link" onclick="enquiry_iframe()">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"> <i class="fas fa-hands-helping btn-icon-wrapper" style="color: white;"></i></svg>
+								</a>
+							</li>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div id="loader12" class="loader12"></div>
+        <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar" style="  width: 100%;">
+
+            <div class="app-main" id="">
+                <div class="app-sidebar sidebar-shadow" id="" style="width:8%">
+                    <div class="app-header__logo">
+                        <div class="logo-src"></div>
+                        <div class="header__pane ml-auto">
+                            <div>
+                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-header__mobile-menu">
+                        <div>
+                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="app-header__menu">
+                        <span>
+                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                <span class="btn-icon-wrapper">
+                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                </span>
+                        </button>
+                        </span>
+                    </div>
+                    <div class="" id="app_header_display1" style="width:9%;">
+                        <div class="app-sidebar__inner">
+                            <ul class="vertical-nav-menu" style="margin-left: 40px;">
+                                <marquee><span style="font-size:16px;color:#891635">Welcome to Financial Management<span></marquee>
+                                    <li align="center" class="app-sidebar__heading" style="font-size:16px;">Menu</li><hr>
+									 <li class="list_lis" >
+										<a href="https://rmt.ecovisrkca.com/InvoiceController/customer_account">
+                                                <i class="fa fa-file"> </i>
+                                                Invoice Management</a>
+												</li>
+									<li class="app-sidebar__heading" style="color:#891635;font-size:14px">Master Data Entry</li>
+									 <li class="list_lis" >
+										<a href="https://rmt.ecovisrkca.com/ImportController/add_ledger_page">
+                                                <i class="fa fa-tasks"> </i>
+                                                Add Ledger</a>
+												</li>
+												 <li class="list_lis" >
+													<a href="https://rmt.ecovisrkca.com/ImportController/add_group_page">
+                                                <i class="fa fa-users"> </i>
+                                                Add Group</a>
+												</li>
+												 <li  class="list_lis">
+												<a href="https://rmt.ecovisrkca.com/ImportController/add_stock_summary_page">
+                                                <i class="fa fa-table"> </i>
+                                                Stock summary</a>
+												</li>
+									<li class="app-sidebar__heading" style="color:#891635;font-size:14px">Transaction Entry</li>
+                                        <li class="list_lis" >
+                                            <a href="https://rmt.ecovisrkca.com/ImportController/journal_entry">
+                                                <i class="fa fa-file"> </i>
+                                                Journal Entry</a>
+                                        </li>
+										<li class="list_lis" >
+                                            <a href="https://rmt.ecovisrkca.com/ImportController/sale_purchase">
+                                                <i class="fa fa-random"> </i>
+                                                Sale/Purchase</a>
+                                        </li>
+										<li class="list_lis" >
+                                            <a href="https://rmt.ecovisrkca.com/ImportController/receipt_voucher">
+                                                <i class="fa fa-th-list"> </i>
+                                                Other Entry</a>
+                                        </li>
+										<li  class="app-sidebar__heading" style="color:#891635;font-size:14px">Reports</li>
+										<li class="list_lis" >
+                                            <a href="https://rmt.ecovisrkca.com/ImportController/balance_sheet_page">
+                                                <i class="fa fa-bars"> </i>
+                                                Balance Sheet</a>
+                                        </li >
+										<li  class="list_lis">
+                                            <a href="https://rmt.ecovisrkca.com/ImportController/ratio_analysis_page">
+                                                <i class="fa fa-sitemap"> </i>
+                                                Ratio Analysis</a>
+                                        </li>
+										<li class="list_lis" >
+                                            <a href="https://rmt.ecovisrkca.com/ImportController/profit_n_loss_page">
+                                                <i class="fa fa-calendar"> </i>
+                                                Profit and Loss</a>
+                                        </li>
+									
+                                   
+
+                                </ul>
+                            </div>
+                        </div>
+                                        </div>
+                <div class="app-main__outer" id="side_menu_display">
+
+                    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer Account Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://rmt.ecovisrkca.com/assets/css/folder-desktop-view.css" rel="stylesheet" type="text/css"/>
+    <link href="https://rmt.ecovisrkca.com/assets/scripts/toastr/toastr.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+  
+
+<style>
+.app_header_display1{
+	    padding-top: 15%
+		
+}
+.app-sidebar__inner{
+	margin-top: 10%;
+}
+.app-sidebar sidebar-shadow{
+	 padding-top: 6%
+}
+.f-top-nav{
+	    margin-top: 2%;
+}
+#sidebarRightMenu{
+	height: 100vh;
+}
+.form-control {
+	font-size:12px;
+}
+</style>
+
+
+<input type="hidden" name="firm_id" id="firm_id" value="Firm_26467"/>
+<input type="hidden" name="userEmail" id="userEmail" value="vishal@gbtech.in"/>
+<input type="hidden" name="locationOfFolder" id="locationOfFolder"/>
+<input type="hidden" name="currentLocation" id="currentLocation"/>
+
+
+<div class="f-container">
+    <div class="f-row">
+        
+        <div class="f-top-nav">
+            <!--<nav class="navbars navbars-dark" style="background-color:#891635">
+                <div class="navbar-left">
+				
+				
+                </div>
+				<div class="company-logo" style="margin-left:16px">
+                            <img src="https://rmt.docango.com/Images/mentor-lab-200-px.png"  width="145px" height="25px"/>
+                        </div>
+                <div class="navbar-center" style="flex: 1">
+                   <div class="m-nav-item" style="        height: 45px;">
+                        
+                    </div>
+					
+                </div>
+                <div class="navbar-right">
+
+                    <div class="dropdown">
+                        <div class="m-nav-item " style="  padding: 7px;    margin: 5px;" data-toggle="dropdown"
+                             aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user mx-1 text-white"></i>
+                        </div>
+                        <div tabindex="-1" role="menu" class="dropdown-menu dropdown-menu-right"
+                             style="position: absolute;transform: translate3d(-254px, 30px, 0px);top: 0px;left: 0px;will-change: transform;background-color: #16aaff !important;color: white">
+                            <div class="dropdown-menu-header">
+                                <div class="widget-content" style="display: flex;
+                                             flex-direction: column;
+                                             align-items: center;">
+                                    <div class="widget-content-wrapper" style="    justify-content: space-between;
+                                                 display: flex;
+                                                 flex-direction: row;
+                                                 padding: 0 0.75rem;">
+                                        <div class="widget-content-left" style="padding: 0 0.75px; margin: auto 0;">
+                                            <div class="widget-heading" style="
+                                                         font-weight: 600;
+                                                         opacity: .9;
+                                                         ">Vishal Gupta</div>
+                                            <div class="widget-subheading" style="
+                                                         opacity: .7;
+                                                         ">vishal@gbtech.in </div>
+                                        </div>
+                                        <div class="widget-content-right" style="padding: 0 0.75px;    margin: auto 0;">
+                                            <a href="https://rmt.docango.com/login" class="btn btn-dark"
+                                               style="border-radius: 25px;font-size: .8rem">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav> -->
+			<div class="card-title">
+                            <h5 class="card-header"style="background: white;">
+                                Customer Invoice Management
+                            </h5>
+                        </div>
+            <div class="f-row" style="padding-left:20px;     background: white;">
+                <div class="f-col-6" style="flex:0.4;height: calc(100vh - 45px)">
+                    <div class="navbars-header f-align-items-center f-shadow">
+                       <div class="col-sm-4">
+					   <select name="year" id="year" class="form-control" onchange="get_data()">
+										<option value="">Select Year</option>
+										<option value="2020-2021">2020-2021</option>
+										<option value="2021-2022">2021-2022</option>
+										<option value="2022-2023">2022-2023</option>
+										<option value="2023-2024">2023-2024</option>
+										<option value="2024-2025">2024-2025</option>
+									</select>
+						
+                        </div> 
+                        <div class="col-sm-4">
+						<select id="customer_new" name="customer_new" class="form-control" onchange="get_customer_data()">
+						<option>Select Customer</option>
+						</select> 
+                        </div>
+                        <div class="col-sm-4">
+                          <button class="btn btn-outline-dark btn-sm " type="button" id="createMenuButton" onclick="open_mdl()"
+                                         >
+                                    <i class="fa fa-plus mx-1"></i>
+                                </button>
+								
+						  <!--<button class="btn btn-outline-dark btn-sm " onclick="go_tally()">
+                                    <i class="fa fa-forward mx-1"></i>Financial management
+                                </button>-->
+								
+                        </div>
+                    </div>
+                    <div class="navbars-header f-align-items-center border-bottom border-dark">
+                        <div class="col-sm-4">
+                            Name
+                        </div>
+                        
+						<div class="col-sm-4 text-right">
+                            Action
+                        </div>
+                    </div>
+                    <div class="navbar-container" id="list_viewFiles1" style="height: calc(100vh - 185px);">
+
+                    </div>
+                </div>
+				<div class="f-col f-col-6" style="flex:1">
+				
+				
+				
+                    <div class="navbar-container w-100 d-none" style="height: 100%;" id="documentViewerBody">
+                       
+                     <center> <div id="ac_rj_div"> <button class="btn  btn-success " style="margin:2%;" onclick="action('1')">Accept</button>
+                       <button class="btn btn-danger " style="margin:2%;" onclick="action('2')">Reject</button> </div></center>
+					   <input type="hidden" name="file_input" id="file_input">
+                        <div class="d-flex">
+                            <input type="hidden" id="documentViewerPath">
+                            <input type="hidden" id="documentViewerName">
+                            <div class="card-body">
+                                <div id="documentViewerSection" style="height:70vh;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                </div>
+              
+            </div>
+        </div>
+     <!--   <div class="f-right-nav" style="background-color:#891635">
+            <nav class="f-nav m-0">
+                <div class="dropdown">
+                    <div class="hamburger hamburger--elastic open-right-drawer" data-toggle="dropdown"
+                         aria-haspopup="true" aria-expanded="false">
+                        <a class="btn btn-sm f-icon">
+                            <i class="fa fa-th"></i>
+                        </a>
+                    </div>
+                    <div tabindex="-1" role="menu" class="dropdown-menu dropdown-menu-right "
+                         style="position: absolute; top: 0px; right: 0px; width: 400px; height: calc(100vh - 8px); background-color: white !important; transform: translate3d(-364px, 5px, 0px); left: 0px; will-change: transform;">
+                        <div class="dropdown-menu-header">
+                            <div class="widget-content align-items-start">
+                                <div class="col-md-12 p-0">
+                                    
+<h4 class="drawer-heading">WORKPLACE APPS</h4>
+<div class="drawer-section">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 p-0">
+                <a href="https://rmt.ecovisrkca.com/new_email_client" class="btn btn-square">
+                    <i class="fa fa-envelope btn-icon-wrapper mb-2" style="color: cadetblue;    font-size: 1.5rem;"></i>
+                    Email
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4  p-0">
+                <a href="https://rmt.ecovisrkca.com/Whatsapp_controller/video_chat" class="btn btn-square">
+                    <i class="fa fa-video btn-icon-wrapper mb-2" style="color: cornflowerblue;    font-size: 1.5rem;"></i>
+                    video chat
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4  p-0">
+                <a href="https://rmt.ecovisrkca.com/board_view" class="btn btn-square">
+                    <i class="fa fa-address-card btn-icon-wrapper mb-2" style="color: cornflowerblue;    font-size: 1.5rem;"></i>
+                    Board
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4  p-0">
+                <a href="https://rmt.ecovisrkca.com/folder_view" class=" btn  btn-square  ">
+                    <i class="fa fa-folder btn-icon-wrapper mb-2" style="color: sandybrown;    font-size: 1.5rem;"></i>
+                    Folder
+                </a>
+            </div>
+			<div class="col-sm-6 col-md-4  p-0">
+                            <a href="https://payroll.docango.com/login_api/vishal@gbtech.in" class="btn-icon-vertical btn-square  btn ">
+                                  <img src="https://rmt.ecovisrkca.com/assets/images/payroll.svg" style="width: 48px;height: 32px;" class="icon-wrapper" />
+                                Payroll
+                            </a>
+                        </div>
+            <div class="col-sm-6 col-md-4 p-0">
+                <a href="https://rmt.ecovisrkca.com/messenger" class="btn-icon-vertical btn-square  btn ">
+                    <i class="fa fa-comment-alt btn-icon-wrapper mb-2" style="color: #c960f4;"></i>
+                    Chat
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+    <h4 class="drawer-heading">RMT</h4>
+    <div class="drawer-section">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-sm-6 col-xl-4 p-0">
+                    <a href="https://rmt.ecovisrkca.com/gc/auth/login" class=" btn-square   ">
+                        <i class="metismenu-icon pe-7s-note2 btn-icon-wrapper mb-2" style="color: #3126d6;"></i>
+                        Dashboard
+                    </a>
+                </div>
+
+                                        <div class="col-sm-6 col-xl-4 p-0">
+                            <a href="https://rmt.ecovisrkca.com/load_planning_dashboard"  class=" btn-square   ">
+                                <i class="fas fa-project-diagram btn-icon-wrapper mb-2" style="color: #0aff55;"></i>
+                                Plan and Schedule
+                            </a>
+                        </div>
+                        
+
+                <div class="col-sm-6 col-xl-4 p-0">
+                    <a href="https://rmt.ecovisrkca.com/work_store_place" class=" btn-square   ">
+                        <i class="fas fa-briefcase btn-icon-wrapper mb-2" style="color: #FFC300;"></i>
+                        Work Store
+                    </a>
+                </div>
+                <div class="col-sm-6 col-xl-4 p-0">
+                    <a href="https://rmt.ecovisrkca.com/enquiry_mobile_place" class=" btn-square   ">
+                        <i class="fas fa-hands-helping btn-icon-wrapper mb-2" style="color: #3126d6;"></i>
+                        Enquiry
+                    </a>
+                </div>
+
+                
+                
+                
+            </div>
+        </div>
+    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div> -->
+        
+
+
+
+<!--Create Account Modal-->
+
+	 <div class="modal fade" id="fileCreateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	 aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Create Customer Account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="customer_form" name="customer_form">
+                                <div class="form-group mx-3 mt-2">
+                                    <label>Customer Name:</label>
+                                    <select id="customer_id" name="customer_id" class="form-control"> 
+						<option>Select Customer</option>
+						</select>
+                                </div>
+                                <div class="form-group mr-3 ml-3">
+                                    <!--<input type="text" id='account_number' class="form-control" name="account_number"readonly> -->
+                                </div>
+                                <div class="float-right  form-group ml-3 mr-3">
+                                    <button type="button" data-dismiss="modal" class="btn btn-dark btn-sm">close</button>
+                                    <button type="submit" class="btn btn-dark btn-sm">save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
+            <script src="https://rmt.ecovisrkca.com/assets/scripts/toastr/toastr.min.js" type="text/javascript"></script>
+            <script src="https://rmt.ecovisrkca.com/assets/scripts/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+            <script src="//cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.6.0/src/loadingoverlay.min.js"></script>
+            <script src="https://rmt.ecovisrkca.com/assets/js/folder_managmenet_ftp.js"></script>
+            <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+            <script>
+                $(document).ready(function() {
+                    document.getElementById("dashboard_dekstop").style.display = "none";
+                    document.getElementById("communication_dekstop").style.display = "none";
+                    document.getElementById("project_dekstop").style.display = "none";
+                    document.getElementById("others_dekstop").style.display = "none";
+                    get_customers_invoice();
+                    get_customers().then(function(customer_data) {
+                        $('#customer_id').empty();
+                        $('#customer_id').append(customer_data);
+                    }).catch(function(e) {
+                        console.log(e);
+                        //                    reject(null);
+                    });
+                });
+
+                function open_mdl() {
+
+                    $("#fileCreateModal").modal('show');
+                    $(".modal-backdrop").hide();
+
+                }
+
+                function go_jv(id) {
+
+                    window.location.href = "https://rmt.ecovisrkca.com/ImportController/journal_entry?id=" + id;
+                }
+
+                function go_sp(id) {
+
+                    window.location.href = "https://rmt.ecovisrkca.com/ImportController/sale_purchase?id=" + id;
+                }
+
+                function go_rec(id) {
+
+                    window.location.href = "https://rmt.ecovisrkca.com/ImportController/receipt_voucher?id=" + id;
+                }
+
+                function go_tally() {
+                    window.location.href = "https://rmt.ecovisrkca.com/ImportController/main_page";
+                }
+
+                function view_tallyData() {
+                    window.location.href = "https://rmt.ecovisrkca.com/View_tallyData";
+                }
+
+                function get_customers() {
+                    var promise = new Promise(function(resolve, reject) {
+                        $.ajax({
+                            type: "POST",
+                            url: "https://rmt.ecovisrkca.com/get_usercustomer",
+                            dataType: "json",
+                            success: function(result) {
+                                var customer_Data = result.customer_Data;
+                                //                $('#customer_id').empty();
+                                if (result['message'] === 'success') {
+
+                                    resolve(customer_Data);
+                                } else {
+                                    resolve(customer_Data);
+                                }
+                            },
+                            error: function(error) {
+                                toastr.info('Something went wrong please try again');
+                            }
+                        });
+                    });
+                    return promise;
+                }
+
+                function get_customers_invoice() {
+                    $.ajax({
+                        type: "POST",
+                        url: "https://rmt.ecovisrkca.com/InvoiceController/get_customers_invoice",
+                        dataType: "json",
+                        success: function(result) {
+                            var customer_Data = result.option;
+                            //                $('#customer_id').empty();
+                            if (result['status'] === 200) {
+                                $("#customer_new").html(customer_Data);
+                            } else {
+                                $("#customer_new").html(customer_Data);
+                            }
+                        },
+                        error: function(error) {
+                            toastr.info('Something went wrong please try again');
+                        }
+                    });
+                }
+
+                function get_data() {
+                    $("#customer_new").val("");
+                }
+
+                function get_customer_data() {
+                    var year = $("#year").val();
+                    if (year == "") {
+                        alert('Please select year.');
+                        $("#customer_new").val("");
+                    } else {
+                        var cust_id = $("#customer_new").val();
+                        get_customersFiles(cust_id, year);
+                    }
+                }
+
+                function get_customersFiles(cust_id, year) {
+                    $.ajax({
+                        type: "POST",
+                        url: "https://rmt.ecovisrkca.com/InvoiceController/view_customerFiles",
+                        dataType: "json",
+                        data: {
+                            cust_id,
+                            year
+                        },
+                        success: function(result) {
+                            if (result['status'] === 200) {
+                                $("#list_viewFiles1").html(result.data); //list_viewFiles
+                            } else {
+                                $("#list_viewFiles1").html(result.data); //list_viewFiles
+                            }
+                        },
+                        error: function(error) {
+                            toastr.info('Something went wrong please try again');
+                        }
+                    });
+                }
+
+                function Generate_account_number() {
+                    var cust_id = $("#customer_id").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "https://rmt.ecovisrkca.com/InvoiceController/createAccountNumber",
+                        dataType: "json",
+                        data: {
+                            cust_id
+                        },
+                        success: function(result) {
+                            $("#account_number").val(result.account_number);
+
+                        },
+                        error: function(error) {
+                            toastr.info('Something went wrong please try again');
+                        }
+                    });
+                }
+
+                function action(id) {
+                    var file = $("#file_input").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "https://rmt.ecovisrkca.com/InvoiceController/action_file",
+                        dataType: "json",
+                        data: {
+                            id,
+                            file
+                        },
+                        success: function(result) {
+                            if (result.status == 200) {
+                                toastr.success('Succefully done');
+                                check_file_accept_reject(file);
+                            } else {
+                                toastr.success('Fail.please try again');
+                                check_file_accept_reject(file);
+                            }
+                        },
+                        error: function(error) {
+                            toastr.info('Something went wrong please try again');
+                        }
+                    });
+                }
+
+                function check_file_accept_reject(id) {
+                    var file = $("#file_input").val();
+
+                    $.ajax({
+                        type: "POST",
+                        url: "https://rmt.ecovisrkca.com/InvoiceController/check_file_accept_reject",
+                        dataType: "json",
+                        data: {
+                            id,
+                            file
+                        },
+                        success: function(result) {
+                            if (result.status == 200) {
+                                var data = result.data;
+                                if (data == 1) {
+                                    $("#ac_rj_div").html("");
+                                    $("#ac_rj_div").html("<br><span style='color:#309450'><b>Accepted</b><span>");
+
+                                } else if (data == 2) {
+                                    $("#ac_rj_div").html("");
+                                    $("#ac_rj_div").html("<br><span style='color:#c43625'><b>Rejected</b><span>");
+                                } else {
+                                    $("#ac_rj_div").html("");
+                                    $("#ac_rj_div").html('<button class="btn  btn-success " style="margin:2%;" onclick="action(' + 1 + ')">Accept</button><button class="btn btn-danger " style="margin:2%;" onclick="action(' + 2 + ')">Reject</button>');
+                                }
+                            } else {
+                                toastr.success('Fail.please try again');
+                            }
+                        },
+                        error: function(error) {
+                            toastr.info('Something went wrong please try again');
+                        }
+                    });
+                }
+
+                $("#customer_form").validate({
+                    rules: {
+                        customer_id: {
+                            required: true
+                        },
+                        account_number: {
+                            required: true
+                        },
+
+                    },
+
+                    errorElement: "span",
+                    submitHandler: function(form) {
+                        $.ajax({
+                            url: 'https://rmt.ecovisrkca.com/InvoiceController/SaveCustomer',
+                            type: "POST",
+                            data: $("#customer_form").serialize(),
+                            success: function(success) {
+                                success = JSON.parse(success);
+                                if (success.status == 200) {
+                                    toastr.success(success.body);
+                                    //window.location.href = "https://rmt.ecovisrkca.com/show_enquiry";
+
+                                } else {
+                                    toastr.error(success.body); //toster.error
+                                }
+                            },
+                            error: function(error) {
+                                console.log(error);
+                                toastr.error("something went to wrong");
+                            }
+                        });
+                    }
+                });
+            </script>
+            <script>
+                function openDocumentViewer(basePath, name) {
+                    check_file_accept_reject(basePath);
+                    var str = name;
+                    $("#file_input").val(basePath);
+                    //let icon = getFileIcon(nameArray[nameArray.length - 1]);
+
+                    let path = basePath;
+                    var file = '';
+                    if (str.match(/.xls/g) !== null || str.match(/.XLSX/g) !== null ||
+                        str.match(/.docx/g) !== null || str.match(/.pptx/g) !== null ||
+                        str.match(/.csv/g) !== null || str.match(/.CSV/g) !== null ||
+                        str.match(/.PPTX/g) !== null || str.match(/.ppt/g) !== null || str.match(/.PPT/g) !== null) {
+                        file = `<iframe id="documentViewerPage" src='https://view.officeapps.live.com/op/embed.aspx?src=${path}' width='100%' height='100%' frameborder='0'> </iframe>`;
+                    } else if (str.match(/.png/g) != '' || str.match(/.jpeg/g) != '' || str.match(/.jpg/g) != '' || str.match(/.pdf/g) != '') {
+                        file = `<iframe id="documentViewerPage" src="${path}"  width='100%' height='100%' frameborder='0'></iframe>`;
+                    } else {
+                        file = `<iframe id="documentViewerPage" src="${path}"  width='100%' height='100%' frameborder='0'></iframe>`;
+                    }
+                    $("#documentViewerSection").empty();
+                    $("#documentViewerSection").append(file);
+                    $("#documentViewerBody").removeClass('d-none');
+
+                }
+            </script>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="confirm_msg_modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmHeader"></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p id="confirmBody"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn_confirm_dismiss" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="btn_confrim_ok" name="btn_add_service" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-drawer-overlay d-none animated fadeIn"></div>
+    <script type="text/javascript" src="https://rmt.ecovisrkca.com/assets/scripts/main.87c0748b313a1dda75f5.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <style>
+        .rightside2 {
+            height: 100%;
+            width: 3%;
+            /* //padding: 1%;
+            //margin-top: 3%; */
+            color: #68349a;
+            /* / / background-color: #ffffff; */
+            box-shadow: 1px 2px 6px 2px rgb(32 33 36 / 41%);
+            margin-top: 13px;
+            background-color: #891635;
+            color: white;
+        }
+        
+        .float {
+            position: fixed;
+            /* width: 60px; */
+            height: 60px;
+            bottom: 1%;
+            right: 1%;
+            /* background-color: #00c292; */
+            z-index: 9999;
+            display: block;
+            color: #FFF;
+            /* border-radius: 50px; */
+            text-align: center;
+            /* box-shadow: 2px 2px 3px #999; */
+            cursor: pointer;
+        }
+        
+        .my-float {
+            margin-top: 22px;
+        }
+        
+        .rightside {
+            height: 100%;
+            width: 70%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            color: #68349a;
+            /* / / background-color: #ffffff; */
+            display: none;
+            top: 6%;
+        }
+        
+        .right12 {
+            margin-top: 1%;
+            color: #891635;
+            padding: 3%;
+            background-color: #ffffff;
+            border-radius: 4px;
+            height: 100%;
+            /* //box-shadow: 1px 1px 4px 2px rgb(32 33 36 / 41%); */
+            box-shadow: -1px 3px 11px 2px #000000;
+        }
+        
+        .chat_head {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            text-align: center;
+            margin-bottom: 2%;
+            background: #891635;
+            color: white;
+        }
+        
+        #iframe_id1 {
+            width: 100%;
+            height: 93%;
+            border: none;
+        }
+        
+        #sidebarRightMenu a {
+            color: white;
+        }
+    </style>
+    <div class="rightside2">
+        <div class="">
+            <nav id="sidebarRightMenu" class="d-md-block collapse px-2 pr-2" style="top:0px;bottom:0;right:0;padding-top:100px">
+                <div class="sidebar-sticky">
+
+                    <ul class="nav flex-column align-content-around">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><i class="fa fa-address-card"></i></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><i class="fa fa-project-diagram"></i></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><i class="fa fa-folder"></i></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fa fa-briefcase"></i></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><i class="fa fa-hands-helping"></i></svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="float" id="newChatbtn" onclick="on()">
+            <i class="fa fa-comments my-float"></i>
+        </div>
+        <!--<div id="slidediv3" class="sidenav3">
+				<a href="#" id="slide3_a">
+					<div class="col-sm-12" style="width:100%">
+						<div class="col-sm-1" style="width:20%;float:left;height:100px;padding-top: 18px;margin-left: -100px;"><button style="transform: rotate(90deg);color:white;width: 104px;border:none;background-color:#595959;"><i class="fa fa-tasks"></i> &nbsp;TASK</button></div>
+						<div class="col-sm-11" style="width:80%;height:300px;overflow-y:auto;font-size:13px;">
+							<p><button class="btn btn-primary" data-toggle="modal" data-target="#board_task_view_modal" ><i class="fa fa-tasks"></i>Board Task - <span id="Btask"></span></button></p>
+							<p><button class="btn btn-primary" data-toggle="modal" data-target="#project_task_view_modal" ><i class="fa fa-tasks"></i>Project Task - <span id="Pro_task"></span></button></p>
+							<p><button class="btn btn-primary" data-toggle="modal" data-target="#personal_task_view_modal" onclick="get_personalTask_button()"><i class="fa fa-tasks"></i> Personal Task </button></p>
+							<p>
+								<button class="btn btn-link"  data-toggle="modal" data-target="#personal_task_modal">
+												  <i class="fa fa-book text-black" style="color:#68349a;font-size:16px;"></i>
+											  </button>
+											  <button class="btn btn-link"  data-toggle="modal" data-target="#forward_task_modal">
+												  <i class="fa fa-book text-black" style="color:#68349a;font-size:16px;"></i>
+											  </button>
+											   <button class="btn btn-link"  data-toggle="modal" data-target="#forward_ptm">
+												  <i class="fa fa-eye text-black" style="color:#68349a;font-size:16px;"></i>
+											  </button>
+							</p></div>
+
+					</div>
+				</a>
+			</div>-->
+
+    </div>
+    </div>
+    <!--second section close... open in left section-->
+    <!-- chat section start -->
+    <div class="rightside" id="overlay_div">
+        <div class=" right12">
+            <div class="chat_head">
+                <div class="col-sm-10" align="center">
+                    <h4> Chat </h4>
+                </div>
+                <div class="col-sm-2">
+
+                    <button class="btn btn-default close_button" onclick="off()" style="padding-top:10px;float: right;"><i class="fa fa-times" style="font-size:16px;color:white"></i></button>
+
+                </div>
+                <br>
+            </div>
+
+            <iframe src="https://rmt.docango.com/messenger" id="iframe_id1" title="Iframe Example"></iframe>
+        </div>
+    </div>
+    <!-- chat section End -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Profile Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+                </div>
+                <form id="uploadImage">
+                    <div class="modal-body">
+
+                        <label>Profile Image</label>
+                        <input type="file" name="UImage[]" id="UImage" class="form-control">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="upload_image()">Upload</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="advertisementModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Advertise Setting</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+                </div>
+                <form id="uploadAdd">
+                    <div class="modal-body">
+
+                        <label>Advertise Image</label>
+                        <input type="file" name="UImage1[]" id="UImage1" class="form-control">
+
+                        <label>Page Link</label>
+                        <input type="text" class="form-control" id="linkpage" name="linkpage">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="upload_advertise()">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade" id="forward_ptm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">View Assignment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+                </div>
+
+
+                <div class="modal-body" id="assignment_view1">
+                </div>
+                <div class="modal-footer">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            $("#overlay_div").hide();
+
+        });
+
+        function upload_image() {
+            var form_data = document.getElementById('uploadImage');
+            var Form_data = new FormData(form_data);
+            //alert(Form_data);
+            $.ajax({
+                type: "POST",
+                url: "https://rmt.ecovisrkca.com/Iframe_controller/upload_image",
+                dataType: "json",
+                data: Form_data,
+                contentType: false,
+                processData: false,
+                success: function(result) {
+                    alert(result);
+                    //
+                    if (result.status === 200) {
+
+                        // toastr.success(result.body);
+                        // $(location).attr('href', 'https://rmt.ecovisrkca.com/view_employee')
+                        alert('uploaded successfully');
+
+
+                    } else {
+                        // document.getElementById('loaders7').style.display = "none";
+                        // toastr.error(result.body);
+                        alert('Not uploaded ');
+                    }
+                },
+                error: function(error) {
+                    //                                                           $("#loader12").hide();
+                    toastr.info('Something went wrong please try again');
+                }
+            });
+        }
+
+        function upload_advertise() {
+            var form_data = document.getElementById('uploadAdd');
+            var Form_data = new FormData(form_data);
+            //alert(Form_data);
+            $.ajax({
+                type: "POST",
+                url: "https://rmt.ecovisrkca.com/Iframe_controller/uploadAdvertise",
+                dataType: "json",
+                data: Form_data,
+                contentType: false,
+                processData: false,
+                success: function(result) {
+                    alert(result);
+                    //
+                    if (result.status === 200) {
+
+                        // toastr.success(result.body);
+                        // $(location).attr('href', 'https://rmt.ecovisrkca.com/view_employee')
+                        toastr.success('uploaded successfully');
+
+
+                    } else {
+                        // document.getElementById('loaders7').style.display = "none";
+                        // toastr.error(result.body);
+                        toastr.error('Not uploaded ');
+                    }
+                },
+                error: function(error) {
+                    //                                                                $("#loader12").hide();
+                    alert();
+                }
+            });
+        }
+
+        function on() {
+
+            $("#overlay_div").toggle();
+
+            //document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            $("#overlay_div").hide();
+        }
+
+        function drop_div() {
+
+            if ($("#drop_div").is(".show")) {
+                $("#drop_div").hide();
+            } else {
+                $("#drop_div").show();
+            }
+
+        }
+
+        function go_signout() {
+            window.location.href = "https://rmt.ecovisrkca.com/login";
+        }
+
+        $(document).click(function() {
+            $("#drop_div").hide();
+
+        });
+
+        function go_payroll() {
+            $.ajax({
+                type: "POST",
+                url: "https://rmt.ecovisrkca.com/Tally/payroll_login",
+                dataType: "json",
+
+                success: function(result) {
+                    if (result.code === 200) {
+                        var email = result.email;
+                        var password = result.password;
+                        window.location.assign("https://payroll.docango.com/Login/rmt_login?user_id1=" + email + "&password1=" + password);
+                    } else {
+                        alert("Your email id is not found please login. if you have your login id and password");
+                        window.location.assign("https://payroll.docango.com");
+                    }
+                },
+                error: function(error) {
+                    //                                                                $("#loader12").hide();
+                    alert("Something went wrong!");
+                }
+            });
+        }
+    </script>
+    <script>
+        function dashboard_dekstop() {
+            document.getElementById("dashboard_dekstop").style.display = "block";
+            document.getElementById("communication_dekstop").style.display = "none";
+            document.getElementById("project_dekstop").style.display = "none";
+            document.getElementById("others_dekstop").style.display = "none";
+            $("#drop_div").toggle();
+        }
+
+        function communication_dekstop() {
+            email_iframe();
+            document.getElementById("dashboard_dekstop").style.display = "none";
+            document.getElementById("communication_dekstop").style.display = "block";
+            document.getElementById("project_dekstop").style.display = "none";
+            document.getElementById("others_dekstop").style.display = "none";
+            $("#drop_div").toggle();
+
+        }
+
+        function email_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/email_client1" id="iframe_id" class="iframe_id" title="Iframe Example"></iframe>');
+        }
+
+        function chat_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/messenger" id="iframe_id1" class="iframe_id" title="Iframe Example"></iframe>');
+        }
+
+        function task_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/view_contract" id="iframe_id2" class="iframe_id" title="Iframe Example"></iframe>');
+        }
+
+        function folder_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/folder_desktop_view" id="iframe_id3" class="iframe_id" title="Iframe Example"></iframe>');
+        }
+
+        function board_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/MobileViewController/board" id="iframe_id4" class="iframe_id" title="Iframe Example"></iframe>');
+        }
+
+        function financial_management() {
+            $('#midddlediv').html('');
+            $("#drop_div").toggle();
+            document.getElementById("dashboard_dekstop").style.display = "none";
+            document.getElementById("communication_dekstop").style.display = "none";
+            document.getElementById("project_dekstop").style.display = "none";
+            document.getElementById("others_dekstop").style.display = "none";
+            window.location.href = 'https://rmt.ecovisrkca.com/InvoiceController/customer_account';
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/InvoiceController/customer_account" id="iframe_id6" class="iframe_id" title="Iframe Example"></iframe>');
+            $("#drop_div").toggle();
+            document.getElementById("dashboard_dekstop").style.display = "none";
+            document.getElementById("communication_dekstop").style.display = "none";
+            document.getElementById("project_dekstop").style.display = "none";
+            document.getElementById("others_dekstop").style.display = "none";
+        }
+
+        function task_dekstop() {
+            task_iframe();
+            document.getElementById("dashboard_dekstop").style.display = "none";
+            document.getElementById("communication_dekstop").style.display = "none";
+            document.getElementById("project_dekstop").style.display = "block";
+            document.getElementById("others_dekstop").style.display = "none";
+            $("#drop_div").toggle();
+        }
+
+
+        function others_dekstop() {
+            customerDetail_iframe();
+            document.getElementById("dashboard_dekstop").style.display = "none";
+            document.getElementById("communication_dekstop").style.display = "none";
+            document.getElementById("project_dekstop").style.display = "none";
+            document.getElementById("others_dekstop").style.display = "block";
+            $("#drop_div").toggle();
+        }
+
+        function videoChat_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/video_chatMobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function listOfBranches_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/view_officeMobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function customerDetail_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/viewcustomerMobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function employeeDetail_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/view_employeeMobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function designation_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/designation_mobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function customerServices_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/customerserviceMobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function service_Offering_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/service_mobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function taskDetails_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/task_mobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function permission_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/PermissionMobile" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function planAndSchedule_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/load_planning_dashboard" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function workStore_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/work_store_place" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function enquiry_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/enquiry_mobile_place" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+
+        function dashboard_iframe() {
+            $('#midddlediv').html('');
+            $('#midddlediv').html('<iframe src="https://rmt.ecovisrkca.com/dashboard" class="iframe_id" title="Iframe Example"></iframe>');
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en'
+        }, 'google_translate_element');
+    }
+</script>
+
+
+
+<script>
+    function toggleFullscreen() {
+        let elem = document.querySelector("body");
+
+        if (!document.fullscreenElement) {
+            elem.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            toggleFullscreen();
+            //            document.exitFullscreen();
+        }
+    }
+    $(document).ready(function() {
+        //        googleTranslateElementInit();
+
+    });
+</script>

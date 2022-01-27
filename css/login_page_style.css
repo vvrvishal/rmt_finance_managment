@@ -1,0 +1,51 @@
+.full_container{
+    background-image: url(../image/visual-stories-micheile-ZVprbBmT8QA-unsplash.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment */
+}
+.login_form {
+    width: 30%;
+    float: right;
+    background: #ffffff9e;
+    border-radius: 8px;
+    padding: 1%;
+    position: absolute;
+    top: 28%;
+    right: 10%;
+    min-width: 430px;
+}
+.btn-sign_in{
+    background: #E1C780 !important;
+}
+
+
+
+/* header  */
+
+
+
+@media(max-width:800px){
+    .login_form{
+        right: 3%;
+        min-width: 400px;
+    }
+}
+@media(max-width:450px){
+    .login_form{
+        top: 20%;
+        padding: 3%;
+
+        min-width: 400px;
+    }
+}
+@media(max-width:380px){
+    .login_form{
+        top: 20%;
+        padding: 3%;
+        min-width: 300px;
+    }
+}

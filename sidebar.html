@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" href="./css/login_page_style.css"> -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .side_menu_list li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .header {
+            background: #F2D176;
+        }
+        
+        .logo_name {
+            color: #ffffff;
+            text-shadow: 0px 1px 2px #000000a8;
+        }
+        
+        .logout span {
+            color: #fff;
+            /* color: #F2D176; */
+        }
+        
+        .logout span i {
+            color: #000;
+            /* color: #F2D176; */
+        }
+        
+        .menu_list:hover {
+            background-color: #f2d1767a;
+        }
+        
+        .menu_list:visited {
+            background-color: #F2D176;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row header">
+        <div class="align-items-center col-md-12 d-flex justify-content-between p-3 pl-4">
+            <div class="d-flex align-items-center ">
+                <img src="./images/finance_management_logo.png" width="8%" alt="logo" class="pl-2">
+                <span><h5 class="logo_name pl-2 mb-0 font-weight-bold text-uppercase">finance management</h5></span>
+            </div>
+            <div class="float-right logout mr-3">
+                <span><b>Logout</b><i class="fas fa-sign-out-alt pl-2" style="transform: rotate(0deg);"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="row p-2">
+        <div class="col-xl-2 col-md-3 d-flex align-items-center">
+            <h6 class="mb-0 ml-3">Navigation</h6>
+        </div>
+        <div class="col-xl-10 col-md-9">
+            <div class="d-flex p-2 align-items-center">
+                <span><i class="fas fa-bars mr-2"></i></span>
+                <h5 class="mb-0" style="color: #A27700;">Main Account Setup</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-2 col-md-3 side_menu_list" style="height: 86vh;">
+
+            <li class="form-control menu_list" style="padding:.675rem .75rem;">
+                <span class="align-items-center d-flex"><i class="fas fa-file-invoice-dollar mr-3"></i><span class="d-none d-md-block">Invoice Management</span></span>
+            </li>
+            <li class="form-control menu_list" style="padding:.675rem .75rem;">
+                <span class="align-items-center d-flex"><i class="fas fa-cogs mr-2"></i><span class="d-none d-md-block">Branch Account Setup</span></span>
+            </li>
+            <li class="form-control menu_list" style="padding:.675rem .75rem;">
+                <span class="align-items-center d-flex"><i class="fas fa-dollar-sign mr-3"></i><span class="d-none d-md-block">Currncy Conversion</span></span>
+            </li>
+            <li class="form-control menu_list" style="padding:.675rem .75rem;">
+                <span class="align-items-center d-flex"><i class="fas fa-database mr-3"></i><span class="d-none d-md-block">Currncy Conversion</span></span>
+            </li>
+            <li class="form-control menu_list" style="padding:.675rem .75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                <span class="align-items-center d-flex"><i class="fas fa-database mr-3"></i><span class="d-none d-md-block">Currncy Conversion</span></span>
+            </li>
+            <li class="form-control menu_list" style="padding:.675rem .75rem;">
+                <span class="align-items-center d-flex"><i class="fas fa-history mr-3"></i><span class="d-none d-md-block">Currncy Conversion</span></span>
+            </li>
+            <li class="form-control menu_list" style="padding:.675rem .75rem;">
+                <span class="align-items-center d-flex"><i class="fas fa-history mr-3"></i><span class="d-none d-md-block">Currncy Conversion</span></span>
+            </li>
+
+        </div>
+        <div class="col-xl-10 col-md-9" style="background-color: #ebebeb; height: 86vh;"></div>
+    </div>
+</body>
+
+</html>
