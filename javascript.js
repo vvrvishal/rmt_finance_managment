@@ -63,18 +63,70 @@ $("#filter_expences").click(function() {
     $(".filter_dropdown").show();
 });
 
-var company_name = document.getElementById('company_name');
-var ledger_name = document.getElementById('ledger_name');
-var ledger_id = document.getElementById('ledger_id');
-var opening_balance = document.getElementById('opening_balance');
-var gstin = document.getElementById('gstin');
-var address = document.getElementById('address');
-var panno = document.getElementById('panno');
+// ================ ledgers part =======================
 
 function create_ledger() {
-    if (panno == '') {
-        alert('select pan no.')
-    } else {
+    var company_name = document.getElementById('company_name').value;
+    var ledger_name = document.getElementById('ledger_name').value;
+    var ledger_id = document.getElementById('ledger_id').value;
+    var opening_balance = document.getElementById('opening_balance').value;
+    var gstin = document.getElementById('gstin').value;
+    var address = document.getElementById('address').value;
+    var panno = document.getElementById('panno').value;
+    var counter = 0;
 
+    if (company_name !== '' && ledger_name !== '' && ledger_id !== '' && opening_balance !== '' && gstin !== '' && address !== '' && panno !== '') {
+        var gst_regex = /[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[0-9]{1}[A-Z]{1}[0-9]{1}/;
+        var pan_regex = /[A-Z]{5}[0-9]{4}[A-Z]{1}/;
+        counter++;
+        console.log(panno);
+        if (gst_regex.test(gstin) && pan_regex.test(panno)) {
+            var html_stru = ` <tr>
+            <th scope="row">${counter}</th>
+            <td>${company_name}</td>
+            <td>${ledger_name}</td>
+            <td>${ledger_id}</td>
+            <td>${opening_balance}</td>
+            <td>${gstin}</td>
+            <td>${address}</td>
+            <td>${panno}</td>
+        </tr>`;
+            // $('#created_ladgers').app
+            document.getElementById('created_ladgers').innerHTML += html_stru;
+        } else {
+            alert('please enter valid gst and pan number');
+        }
+    } else {
+        if (company_name == '') {
+            alert('please enter a company name');
+        } else if (ledger_name == '') {
+            alert('please enter a ledger name');
+        } else if (ledger_id == '') {
+            alert('please enter a ledger id');
+        } else if (opening_balance == '') {
+            alert('please enter a opening balance');
+        } else if (gstin == '') {
+            alert('please enter a gst number');
+        } else if (address == '') {
+            alert('please enter a Address');
+        } else if (panno == '') {
+            alert('please enter a pan number');
+        }
     }
+}
+
+// ================= menu show and side =================
+
+function open_menu(evt, menu_content) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(menu_content).style.display = "block";
+    evt.currentTarget.className += " active";
 }
